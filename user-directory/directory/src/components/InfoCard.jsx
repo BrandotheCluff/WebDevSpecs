@@ -1,9 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 
-const InfoCard = ({data, length, index}) => {
+const InfoCard = ({ data, length, index }) => {
+
+
   return (
     <div>
-        <h2>{index}/{length}</h2>
+      <h2>
+        {index}/{length}
+      </h2>
       <h2>{data.name.first}</h2>
       <h2>{data.name.last}</h2>
       <div>

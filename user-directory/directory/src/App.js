@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import InfoCard from "./components/InfoCard";
 import NavBar from "./components/NavBar";
+import EditUser from "./components/EditUser";
 import data from "./data";
 import "./App.css";
 
@@ -8,6 +9,7 @@ function App() {
   const [index, setIndex] = useState(0);
   const [users, setUsers] = useState(data);
   const [person, setPerson] = useState(users[index]);
+  const [cardEdit, setCardEdit] = useState(false);
   let length = users.length;
 
   useEffect(() => {
@@ -40,11 +42,21 @@ function App() {
     })
   };
 
+  const toggleEdit = (e) => {
+    setCardEdit(cardEdit => !cardEdit)
+  }
+
+  const renderEdit = () => {
+    setUsers(prevState => {
+      return prevState.filter(user => user !== cardEdit)
+    })
+  }
+
   return (
     <div className="App">
       <InfoCard data={person} length={length} index={index + 1} />
-      <NavBar up={increaseIndex} down={decreaseIndex} deleteUser={deleteUser}/>
-      
+      <NavBar up={increaseIndex} down={decreaseIndex} deleteUser={deleteUser} toggleEdit={toggleEdit}/>
+      {cardEdit && < EditUser data={person} users={users} toggleEdit={toggleEdit} renderEdit={renderEdit} index={index}/>}
     </div>
   );
 }
