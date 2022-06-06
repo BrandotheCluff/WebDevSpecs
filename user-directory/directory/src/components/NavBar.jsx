@@ -1,30 +1,36 @@
-import React, {useState} from "react";
-import NewUser from "./NewUser"
-import EditUser from "./EditUser"
+import React, { useState } from "react";
+import NewUser from "./NewUser";
+import "../App.css"
 
+const NavBar = ({ up, down, deleteUser, toggleEdit }) => {
+  const [formDisplay, setFormDisplay] = useState(false);
 
+  const openForm = (e) => {
+    setFormDisplay((formDisplay) => !formDisplay);
+  };
 
-const NavBar = ({up, down, deleteUser, toggleEdit}) => {
-
-const [formDisplay, setFormDisplay] = useState(false)
-
-const openForm = (e) => {
-    setFormDisplay(formDisplay => !formDisplay)
-}
-  
-
-
-
-    return (
-        <div>
-            <button onClick={down}>Previous</button>
-            <button onClick={toggleEdit}>Edit</button>
-            <button onClick={deleteUser}>Delete</button>
-            <button onClick={openForm}>New</button>
-            <button onClick={up}>Next</button>
-            {formDisplay && <NewUser openForm={openForm}/>}
-        </div>
-    )
+  return (
+    <div className="BtnField">
+      <button className="Plain" onClick={down}>
+        Previous
+      </button>
+      <div className="BlueBtnBox">
+        <button className="BlueBtn" onClick={toggleEdit}>
+          Edit
+        </button>
+        <button className="BlueBtn" onClick={deleteUser}>
+          Delete
+        </button>
+        <button className="BlueBtn" onClick={openForm}>
+          New
+        </button>
+      </div>
+      <button className="Plain" onClick={up}>
+        Next
+      </button>
+      {formDisplay && <NewUser openForm={openForm} />}
+    </div>
+  );
 };
 
-export default NavBar
+export default NavBar;

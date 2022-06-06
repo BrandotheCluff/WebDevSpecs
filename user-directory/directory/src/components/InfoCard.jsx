@@ -1,10 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
+import "../App.css"
 
 const InfoCard = ({ data, length, index }) => {
 
 
   return (
-    <div>
+    <div className="Card">
       <h2>
         {index}/{length}
       </h2>

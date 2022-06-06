@@ -17,10 +17,10 @@ function App() {
   }, [users, index]);
 
   const increaseIndex = () => {
-    if (index <= length - 1) {
+    if (index < length - 1) {
       setIndex(index + 1);
     } else {
-      alert("This is the last user");
+      setIndex(0)
     }
   };
 
@@ -28,7 +28,7 @@ function App() {
     if (index >= 1) {
       setIndex(index - 1);
     } else {
-      alert("You are already at the beginning");
+      setIndex(length - 1);
     }
   };
 
@@ -54,9 +54,16 @@ function App() {
 
   return (
     <div className="App">
+      <header id="Header">Home</header>
+      <div className="Borders">
+      <div className="Card">
       <InfoCard data={person} length={length} index={index + 1} />
+      </div>
+      <div className="Nav">
       <NavBar up={increaseIndex} down={decreaseIndex} deleteUser={deleteUser} toggleEdit={toggleEdit}/>
       {cardEdit && < EditUser data={person} users={users} toggleEdit={toggleEdit} renderEdit={renderEdit} index={index}/>}
+      </div>
+      </div>
     </div>
   );
 }

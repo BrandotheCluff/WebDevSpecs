@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+
+}
+
+#Header {
+  background-color: #38c4eb;
+  padding: 20px;
+  text-align: left;
+  font-weight: bold;
 }
 
 .App-logo {
@@ -15,13 +24,13 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: white; */
 }
 
 .App-link {
@@ -35,4 +44,43 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Borders {
+  background-color: #282c34;
+  margin: 40px;
+  border: 20px;
+}
+
+.Card {
+  background-color: #8f9195;
+  margin: 40px;
+  border-top: 40px;
+
+}
+
+
+
+.BtnField {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 0, 50px, 0, 50px; */
+}
+
+.BlueBtnBox {
+  justify-content: space-between;
+}
+
+.BlueBtn {
+background-color: #38c4eb;
+color: white;
+border-radius: 30%;
+padding: 2px, 2px, 2px, 2px;
+border: none
+}
+
+.Plain {
+  background: none;
+  color: white;
+  border: none;
 }
