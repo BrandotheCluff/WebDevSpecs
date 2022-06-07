@@ -62,6 +62,7 @@ function App() {
       <div className="Nav">
       <NavBar up={increaseIndex} down={decreaseIndex} deleteUser={deleteUser} toggleEdit={toggleEdit}/>
       {cardEdit && < EditUser data={person} users={users} toggleEdit={toggleEdit} renderEdit={renderEdit} index={index}/>}
+      
       </div>
       </div>
     </div>

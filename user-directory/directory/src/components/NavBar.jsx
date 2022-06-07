@@ -12,9 +12,10 @@ const NavBar = ({ up, down, deleteUser, toggleEdit }) => {
   return (
     <div className="BtnField">
       <button className="Plain" onClick={down}>
-        Previous
+        &lt; Previous
       </button>
       <div className="BlueBtnBox">
+        
         <button className="BlueBtn" onClick={toggleEdit}>
           Edit
         </button>
@@ -24,9 +25,10 @@ const NavBar = ({ up, down, deleteUser, toggleEdit }) => {
         <button className="BlueBtn" onClick={openForm}>
           New
         </button>
+       
       </div>
       <button className="Plain" onClick={up}>
-        Next
+        Next &gt;
       </button>
       {formDisplay && <NewUser openForm={openForm} />}
     </div>
