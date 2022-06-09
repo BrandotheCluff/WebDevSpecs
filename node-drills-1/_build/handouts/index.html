@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Node Drills | Devmountain Foundations</title>
+
+      <link
+        href="_static/pygments.css"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <link href="_static/devmountain.css" rel="stylesheet" type="text/css" />
+          <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+          <link rel="stylesheet" type="text/css" href="_static/devmountain.css" />
+          <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+          <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+
+      <script src="_static/pdfobject.min.js"></script>
+      
+  </head>
+  <body>
+      <div id="handouts-container">
+        <header id="page-header">
+            <p id="project-title">Devmountain Foundations</p>
+            <p id="page-title">Node Drills</p>
+              <p id="backlink">
+                <a href="/"> &laquo; Back to Homepage </a>
+              </p>
+        </header>
+
+        <nav id="page-toc"><ul>
+<li><a class="reference internal" href="#">Node Drills</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#app-1">App 1</a><ul>
+<li><a class="reference internal" href="#intro">Intro</a></li>
+<li><a class="reference internal" href="#step-1">Step 1</a></li>
+<li><a class="reference internal" href="#step-2">Step 2</a></li>
+<li><a class="reference internal" href="#step-3">Step 3</a></li>
+<li><a class="reference internal" href="#step-4">Step 4</a></li>
+<li><a class="reference internal" href="#step-5">Step 5</a></li>
+<li><a class="reference internal" href="#step-6">Step 6</a></li>
+<li><a class="reference internal" href="#step-7">Step 7</a></li>
+<li><a class="reference internal" href="#step-8">Step 8</a></li>
+<li><a class="reference internal" href="#step-9">Step 9</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#app-2">App 2</a><ul>
+<li><a class="reference internal" href="#part-1">Part 1</a></li>
+<li><a class="reference internal" href="#part-2">Part 2</a></li>
+<li><a class="reference internal" href="#part-3">Part 3</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#app-3">App 3</a><ul>
+<li><a class="reference internal" href="#id1">Part 1</a></li>
+<li><a class="reference internal" href="#id2">Part 2</a></li>
+<li><a class="reference internal" href="#id3">Part 3</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#app-4">App 4</a><ul>
+<li><a class="reference internal" href="#id4">Introduction</a></li>
+<li><a class="reference internal" href="#setup">Setup</a></li>
+<li><a class="reference internal" href="#create-a-file">Create a file</a></li>
+<li><a class="reference internal" href="#read-a-file">Read a file</a></li>
+<li><a class="reference internal" href="#update-a-file">Update a file</a></li>
+<li><a class="reference internal" href="#rename-a-file">Rename a file</a></li>
+<li><a class="reference internal" href="#delete-a-file">Delete a file</a></li>
+<li><a class="reference internal" href="#using-path">Using Path</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+
+        <main id="page-content">
+            <section class="section" id="node-drills">
+<h1>Node Drills</h1>
+<section class="section" id="introduction">
+<h2>Introduction</h2>
+<p>In this exercise, you’ll be working through 3 different apps to practice node concepts. Each app (that requires starter code) has its own folder in the directory that you can download from Frodo.</p>
+<div class="admonition note">
+<p class="admonition-title">Solutions</p>
+<div class="admonition-body docutils container">
+<p>Some of the steps have boxes that can be expanded to show solutions! Before you view those, attempt the problem on your own.</p>
+</div>
+</div>
+</section>
+<section class="section" id="app-1">
+<h2>App 1</h2>
+<section class="section" id="intro">
+<h3>Intro</h3>
+<p>There is no starter code for this app. You will be running commands in your terminal.</p>
+</section>
+<section class="section" id="step-1">
+<h3>Step 1</h3>
+<p>Using Node’s built-in REPL feature, have the REPL show all of the modules it has access to.</p>
+<div class="togglereveal "><details class="admonition-body"><summary></summary><p>Open an instance of your bash/terminal. Type <code class="docutils literal notranslate"><span class="pre">node</span></code> and press the enter key to open Node’s REPL feature. Press your tab key twice.</p>
+</details></div></section>
+<section class="section" id="step-2">
+<h3>Step 2</h3>
+<p>Using the REPL feature, Look up the different methods that each of the following Node.js modules have:  <code class="docutils literal notranslate"><span class="pre">fs</span></code>, <code class="docutils literal notranslate"><span class="pre">util</span></code>, <code class="docutils literal notranslate"><span class="pre">events</span></code>, <code class="docutils literal notranslate"><span class="pre">path</span></code> and <code class="docutils literal notranslate"><span class="pre">http</span></code></p>
+<div class="togglereveal "><details class="admonition-body"><summary></summary><p>Type the name of the module. Put a <code class="docutils literal notranslate"><span class="pre">.</span></code> at the end. Press your tab key twice. example: <code class="docutils literal notranslate"><span class="pre">fs.</span></code></p>
+</details></div></section>
+<section class="section" id="step-3">
+<h3>Step 3</h3>
+<p>Clear the node REPL.</p>
+<div class="togglereveal "><details class="admonition-body"><summary></summary><p><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">L</span></code></p>
+</details></div></section>
+<section class="section" id="step-4">
+<h3>Step 4</h3>
+<p>Write a simple function. Then execute the function.</p>
+<div class="togglereveal "><details class="admonition-body"><summary></summary><p>For example:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">today</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Date</span><span class="p">())</span>
+<span class="p">}</span>
+<span class="nx">today</span><span class="p">()</span>
+</pre></div>
+</div>
+</details></div></section>
+<section class="section" id="step-5">
+<h3>Step 5</h3>
+<p>Run the following command: <code class="docutils literal notranslate"><span class="pre">.help</span></code>. See the different commands that are available to you. Enter into editor mode. Copy and paste the following code:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[[],[{</span><span class="nx">age</span><span class="o">:</span> <span class="mf">21</span><span class="p">,</span> <span class="nx">color</span><span class="o">:</span> <span class="s2">&quot;blue&quot;</span><span class="p">}]]</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="o">===</span><span class="p">[]){</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;It&#39;s truthy!&quot;</span><span class="p">)}</span><span class="k">else</span><span class="p">{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;False&quot;</span><span class="p">)}</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="o">==</span><span class="p">[]){</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;It&#39;s truthy!&quot;</span><span class="p">)}</span><span class="k">else</span><span class="p">{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;False&quot;</span><span class="p">)}</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="o">=</span><span class="p">[]){</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;It&#39;s truthy!&quot;</span><span class="p">)}</span><span class="k">else</span><span class="p">{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;False&quot;</span><span class="p">)}</span>
+</pre></div>
+</div>
+<p>Then have the code evaluated with <code class="docutils literal notranslate"><span class="pre">`Ctrl+D`</span></code></p>
+<div class="togglereveal "><details class="admonition-body"><summary></summary><img alt="_images/stepFive.png" src="_images/stepFive.png" style="width: 80%;" />
+</details></div></section>
+<section class="section" id="step-6">
+<h3>Step 6</h3>
+<p>Save all of your REPL session as a .js file</p>
+<div class="togglereveal "><details class="admonition-body"><summary></summary><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">save</span> <span class="n">true</span><span class="o">-</span><span class="ow">or</span><span class="o">-</span><span class="n">false</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+</details></div></section>
+<section class="section" id="step-7">
+<h3>Step 7</h3>
+<p>Exit the REPL with <code class="docutils literal notranslate"><span class="pre">Ctrl+D</span></code> or <code class="docutils literal notranslate"><span class="pre">.exit</span></code></p>
+</section>
+<section class="section" id="step-8">
+<h3>Step 8</h3>
+<p>Load the file in REPL. The one that was just saved.</p>
+<div class="togglereveal "><details class="admonition-body"><summary></summary><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="n">Start</span> <span class="n">REPL</span>
+
+<span class="n">node</span>
+
+<span class="o">//</span><span class="n">Load</span> <span class="n">the</span> <span class="n">file</span>
+
+<span class="o">.</span><span class="n">load</span> <span class="n">true</span><span class="o">-</span><span class="ow">or</span><span class="o">-</span><span class="n">false</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+</details></div></section>
+<section class="section" id="step-9">
+<h3>Step 9</h3>
+<p>Change the value of the variable “array” to something else.</p>
+<div class="togglereveal "><details class="admonition-body"><summary></summary><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">array</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span>
+</pre></div>
+</div>
+</details></div></section>
+</section>
+<section class="section" id="app-2">
+<h2>App 2</h2>
+<section class="section" id="part-1">
+<h3>Part 1</h3>
+<p>For this part, you’ll be building the same server twice. Why? For one, repetition is good and will help you remember how to do this. And two: in one file, you’ll be using <code class="docutils literal notranslate"><span class="pre">require</span></code> and in the other, you’ll use <code class="docutils literal notranslate"><span class="pre">import</span></code>. Solutions can be found in the solutions folder downloaded from Frodo.</p>
+<ol class="arabic simple">
+<li><p>Bring the <code class="docutils literal notranslate"><span class="pre">http</span></code> module into the <cite>practice.js</cite> file using <code class="docutils literal notranslate"><span class="pre">require</span></code></p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">createServer()</span></code> method from the <code class="docutils literal notranslate"><span class="pre">http</span></code> module to make your server</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">listen()</span></code> method from the <code class="docutils literal notranslate"><span class="pre">createServer()</span></code> method to get your server listening for changes</p></li>
+<li><p>Use node’s CLI to run our file (You know that this code is working if it has your <code class="docutils literal notranslate"><span class="pre">console.log</span></code> message showing up in your terminal/bash)</p></li>
+<li><p>Kill the server process with <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">c</span></code></p></li>
+<li><p>Repeat these steps in the <cite>practice.mjs</cite> file using <code class="docutils literal notranslate"><span class="pre">import</span></code> instead of <code class="docutils literal notranslate"><span class="pre">require</span></code></p></li>
+</ol>
+</section>
+<section class="section" id="part-2">
+<h3>Part 2</h3>
+<p>In this part, you’ll be exploring more of the Node CLI. You’ll be accessing one of the servers you made in Part 1.</p>
+<p><strong>1.</strong> Check what version of Node.js you have on your computer using the Node.js CLI.</p>
+<div class="togglereveal "><details class="admonition-body"><summary></summary><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+</details></div><p><strong>2.</strong> Check what other options you have with the Node.js CLI. Read through the list, and see what you have available!</p>
+<div class="togglereveal "><details class="admonition-body"><summary></summary><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">-</span><span class="n">h</span>
+</pre></div>
+</div>
+</details></div><p><strong>3.</strong> Using the Node.js CLI, run NODE_DEBUG to watch the <code class="docutils literal notranslate"><span class="pre">http</span></code> module &amp;&amp; run <code class="docutils literal notranslate"><span class="pre">node</span></code> on your <cite>practice.js</cite> or <cite>practice.mjs</cite> file.</p>
+<p><strong>Hint</strong></p>
+<div class="togglereveal "><details class="admonition-body"><summary></summary><p>Make sure that your path is correct! Questions to ask: What file do I want to run? How do I access that file from where I am at currently in my terminal/bash? You’ll know that this code is working if it has your <code class="docutils literal notranslate"><span class="pre">console.log</span></code> message showing up in your terminal/bash</p>
+</details></div><p><strong>Solution</strong></p>
+<div class="togglereveal "><details class="admonition-body"><summary></summary><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NODE_DEBUG</span><span class="o">=</span><span class="n">http</span> <span class="n">node</span> <span class="n">node</span><span class="o">-</span><span class="n">drills</span><span class="o">-</span><span class="n">part</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">02</span><span class="o">/</span><span class="n">solution</span><span class="o">.</span><span class="n">js</span>
+</pre></div>
+</div>
+</details></div><p><strong>4.</strong> Open your browser and access your local port that is defined in your <cite>practice.js</cite> or <cite>practice.mjs</cite> (the one that is running currently).</p>
+<div class="togglereveal "><details class="admonition-body"><summary></summary><p>Once your browser is open, in the URL bar type: <code class="docutils literal notranslate"><span class="pre">http://localhost:3001/</span></code></p>
+<ul class="simple">
+<li><p>In the <cite>solution.js</cite> &amp;&amp; <cite>solution.mjs</cite>, our <code class="docutils literal notranslate"><span class="pre">.listen()</span></code> function is listening on port <code class="docutils literal notranslate"><span class="pre">3001</span></code>.</p></li>
+<li><p>Make sure your port is also whichever your <code class="docutils literal notranslate"><span class="pre">.listen()</span></code> function is listening on for your <cite>practice.js</cite> OR <cite>practice.mjs</cite> function.</p></li>
+<li><p>You will notice this working if you see in your terminal some messages from <code class="docutils literal notranslate"><span class="pre">NODE_DEBUG</span></code></p></li>
+</ul>
+</details></div><p><strong>5.</strong> Kill the server process with <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">c</span></code></p>
+</section>
+<section class="section" id="part-3">
+<h3>Part 3</h3>
+<p>Now let’s explore the node process object.</p>
+<ul>
+<li><p>Open an instance of Node.js REPL by running <code class="docutils literal notranslate"><span class="pre">node</span></code> in your terminal/bash.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">console.log(process)</span></code>. Take a moment to see what properties this object has.</p></li>
+<li><p>See if you can find and define the following properties on the object:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>stdout</p></li>
+<li><p>stdin</p></li>
+<li><p>stderr</p></li>
+<li><p>env</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>Hint</strong></p>
+<div class="togglereveal "><details class="admonition-body"><summary></summary><p>If it helps:</p>
+<ul class="simple">
+<li><p>Copy the entire result from your terminal/bash.</p></li>
+<li><p>Create a new file (ex. <cite>processObject.js</cite>)</p></li>
+<li><p>Paste the entire result from your terminal/bash.</p></li>
+<li><p>Collapse top levels of the object so it is more viewable.</p></li>
+</ul>
+</details></div><div class="admonition note">
+<p class="admonition-title">Further Study</p>
+<div class="admonition-body docutils container">
+<p>Here are some subjects we haven’t covered, but to be aware they exist:</p>
+<p>The process object has the following functions:</p>
+<ul class="simple">
+<li><p><strong>stdout</strong></p></li>
+<li><p>stdout.write()</p></li>
+<li><p><strong>stdin</strong></p></li>
+<li><p>stdin.pipe()</p></li>
+<li><p>stdin.read()</p></li>
+<li><p><strong>stderr</strong></p></li>
+<li><p><strong>env</strong></p></li>
+<li><p><strong>on</strong></p></li>
+<li><p><strong>exit</strong></p></li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section class="section" id="app-3">
+<h2>App 3</h2>
+<section class="section" id="id1">
+<h3>Part 1</h3>
+<p>Let’s explore some of the built in objects and functions that Node.js gives us.</p>
+<ol class="arabic simple">
+<li><p>Open the <cite>log.js</cite> file found in the <cite>app-3</cite> folder</p></li>
+<li><p>Look over the file – we’ll be logging 6 things. The last one, <code class="docutils literal notranslate"><span class="pre">arguments</span></code> is an array containing the first 5.</p></li>
+<li><p>Run the file and explore the logs.</p></li>
+<li><p>Recall that Node.js creates a function wrapper with these as arguments.</p></li>
+</ol>
+</section>
+<section class="section" id="id2">
+<h3>Part 2</h3>
+<p>Remember the solutions can be downloaded from Frodo. Try to do this one with both <code class="docutils literal notranslate"><span class="pre">require</span></code> and <code class="docutils literal notranslate"><span class="pre">import</span></code> for an extra challenge!</p>
+<ol class="arabic simple">
+<li><p>Create a new file in the <cite>app-3</cite> folder called <cite>addTwoFunction.js</cite> (not <code class="docutils literal notranslate"><span class="pre">.mjs</span></code>!).</p></li>
+<li><p>In that file, set <code class="docutils literal notranslate"><span class="pre">module.exports</span></code> to a function (expression or arrow) that takes in a number and returns that number + 2. (Hint: don’t make <code class="docutils literal notranslate"><span class="pre">module.exports</span></code> an object, just set it directly to the function.)</p></li>
+<li><p>In <cite>practice.js</cite> and/or <cite>practice.mjs</cite>, bring in the function. Make sure you’re using <code class="docutils literal notranslate"><span class="pre">require</span></code> and/or <code class="docutils literal notranslate"><span class="pre">import</span></code> correctly for your module type.</p></li>
+<li><p>In your <cite>practice</cite> file, invoke the function passing in a number.</p></li>
+<li><p>Run the <cite>practice</cite> file.</p></li>
+</ol>
+</section>
+<section class="section" id="id3">
+<h3>Part 3</h3>
+<p>Let’s try something similar to Part 2, but with more functions this time.</p>
+<ol class="arabic simple">
+<li><p>Create a new file in the <cite>app-3</cite> folder called <cite>functions.js</cite> (not <code class="docutils literal notranslate"><span class="pre">.mjs</span></code>!).</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">module.exports</span></code> equal to an empty object. On this object we will define many properties that will be individual functions.</p></li>
+<li><p>Make a property called <code class="docutils literal notranslate"><span class="pre">minusOne</span></code> whose value is a function that will return any given number, minus 1.</p></li>
+<li><p>Make a property called <code class="docutils literal notranslate"><span class="pre">timesThree</span></code> whose value is a function that will return any given number, multiplied by 3.</p></li>
+<li><p>Make a property called <code class="docutils literal notranslate"><span class="pre">ageText</span></code> whose value is a function that will return any given number, inside the string I am <code class="docutils literal notranslate"><span class="pre">num</span></code> years old!</p></li>
+<li><p>In <cite>practice.js</cite> and/or <cite>practice.mjs</cite>, bring in the functions. Make sure you’re using <code class="docutils literal notranslate"><span class="pre">require</span></code> and/or <code class="docutils literal notranslate"><span class="pre">import</span></code> correctly for your module type.</p></li>
+<li><p>In your <cite>practice</cite> file, invoke each function (don’t forget to pass in a number!).</p></li>
+<li><p>Run the <cite>practice</cite> file.</p></li>
+<li><p>Challenge: If you’d like to, figure out how to export from an <code class="docutils literal notranslate"><span class="pre">.mjs</span></code> file. Don’t spend too much time on this though, or come back to it when you’ve finished the rest of the lab.</p></li>
+</ol>
+</section>
+</section>
+<section class="section" id="app-4">
+<h2>App 4</h2>
+<section class="section" id="id4">
+<h3>Introduction</h3>
+<p>In this section, you’ll be working with the <code class="docutils literal notranslate"><span class="pre">fs</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code> modules. You should start with a <cite>.js</cite> file.</p>
+<p>If you’d like to try <cite>.mjs</cite> when you are done with the first, you can. Recall that <code class="docutils literal notranslate"><span class="pre">__dirname</span></code> is <strong>not</strong> available in ECMAScript modules (<cite>.mjs</cite>) and that you’ll use <code class="docutils literal notranslate"><span class="pre">require</span></code> in <cite>.js</cite> or <code class="docutils literal notranslate"><span class="pre">import</span></code> in <cite>.mjs</cite>.</p>
+<p>You can view both file types in the solutions.</p>
+</section>
+<section class="section" id="setup">
+<h3>Setup</h3>
+<p>Let’s practice working with <code class="docutils literal notranslate"><span class="pre">fs</span></code>. The Node.js <code class="docutils literal notranslate"><span class="pre">file</span> <span class="pre">system</span></code> module allows you to work with the file system on your computer. You can read more about it in their <a class="reference external" href="https://nodejs.dev/learn/the-nodejs-fs-module" target="_blank">docs</a>. Today we will use it to:</p>
+<ul class="simple">
+<li><p>Create files</p></li>
+<li><p>Read files</p></li>
+<li><p>Update files</p></li>
+<li><p>Rename files</p></li>
+<li><p>Delete files</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Bring the <code class="docutils literal notranslate"><span class="pre">fs</span></code> module into the <code class="docutils literal notranslate"><span class="pre">practice.js</span></code> file in the <cite>app-4</cite> folder, saving it to a variable called <code class="docutils literal notranslate"><span class="pre">fs</span></code>.</p></li>
+</ol>
+</section>
+<section class="section" id="create-a-file">
+<h3>Create a file</h3>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">.appendFile()</span></code> method to make a file. <code class="docutils literal notranslate"><span class="pre">.appendFile()</span></code> will look to see if the file exists, if so it will add this data to the file, if it does not exist, it will create the file and add the data. <code class="docutils literal notranslate"><span class="pre">.appendFile()</span></code> takes in 3 parameters: 1) filepath or path to file that is supposed to exist, 2) data, which will most often be a string, and 3) a callback that will handle errors and success (can be defined outside or can be an anonymous arrow function).</p>
+<p><strong>Boiler plate hint</strong></p>
+<div class="togglereveal "><details class="admonition-body"><summary></summary><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">fs</span><span class="p">.</span><span class="nx">appendFile</span><span class="p">(</span><span class="s2">&quot;./&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{})</span>
+</pre></div>
+</div>
+</details></div><ol class="arabic simple">
+<li><p>In <cite>practice.js</cite>, call <code class="docutils literal notranslate"><span class="pre">fs.appendFile()</span></code>, passing in a file path to a new file called <code class="docutils literal notranslate"><span class="pre">text.txt</span></code>, make sure you include the whole file path. (Hint: Your file path can start from where you run node in your terminal OR be absolute (all the way to the root)).</p></li>
+<li><p>Now write your second parameter: the data. This can be any string you wish (“Hello World” if you’re looking for ideas).</p></li>
+<li><p>Last, your third param, a callback! This function should take in one parameter, usually called <code class="docutils literal notranslate"><span class="pre">err</span></code> or <code class="docutils literal notranslate"><span class="pre">error</span></code>. If <code class="docutils literal notranslate"><span class="pre">err</span></code> is true, log <code class="docutils literal notranslate"><span class="pre">err</span></code>; otherwise, log <code class="docutils literal notranslate"><span class="pre">success!</span></code> (or similar).</p></li>
+<li><p>Run your <cite>practice.js</cite> file with <code class="docutils literal notranslate"><span class="pre">node</span></code>. It should create the .txt file for you!</p></li>
+</ol>
+</section>
+<section class="section" id="read-a-file">
+<h3>Read a file</h3>
+<p>You’ll start to see some similarities across these methods, like that they all accept a filepath as the first argument and take a callback as the last argument. In the case of reading, we can include an optional argument in between those for telling the system how to encode the file. Today we’ll just use <code class="docutils literal notranslate"><span class="pre">utf8</span></code> for that value.</p>
+<ol class="arabic simple">
+<li><p>In <cite>practice.js</cite>, call <code class="docutils literal notranslate"><span class="pre">fs.readFile()</span></code>, passing in a file path to you <code class="docutils literal notranslate"><span class="pre">.txt</span></code> file.</p></li>
+<li><p>Now for the second parameter: the string <code class="docutils literal notranslate"><span class="pre">utf8</span></code>.</p></li>
+<li><p>Last, your third param, a callback! This function should take in <strong>two</strong> parameters, usually called <code class="docutils literal notranslate"><span class="pre">err</span></code> or <code class="docutils literal notranslate"><span class="pre">error</span></code> and <code class="docutils literal notranslate"><span class="pre">data</span></code>. If <code class="docutils literal notranslate"><span class="pre">err</span></code> is true, log <code class="docutils literal notranslate"><span class="pre">err</span></code>; otherwise, log the data.</p></li>
+<li><p>Run your <cite>practice.js</cite> file with <code class="docutils literal notranslate"><span class="pre">node</span></code>. You should be able to see the file logged!</p></li>
+</ol>
+</section>
+<section class="section" id="update-a-file">
+<h3>Update a file</h3>
+<p>What we are going to do is rewrite the <code class="docutils literal notranslate"><span class="pre">text.txt</span></code> file completely using <code class="docutils literal notranslate"><span class="pre">writeFile()</span></code>. You may notice you have a few “Hello World“‘s building up in that <code class="docutils literal notranslate"><span class="pre">text.txt</span></code> file. You will notice that as we use the <code class="docutils literal notranslate"><span class="pre">.writeFile()</span></code> method that the last method to run will be our <code class="docutils literal notranslate"><span class="pre">.readFile()</span></code>. All methods that write information will go first, starting from the top of our file. Be sure to have your <code class="docutils literal notranslate"><span class="pre">.writeFile()</span></code> method at the bottom of the file so it gets rewritten. You can read more about writing files <a class="reference external" href="https://nodejs.dev/learn/writing-files-with-nodejs" target="_blank">here</a>.</p>
+<ol class="arabic simple">
+<li><p>Using your knowledge from <code class="docutils literal notranslate"><span class="pre">appendFile()</span></code>, try to write out this <code class="docutils literal notranslate"><span class="pre">writeFile()</span></code> function passing in a string other than your original string.</p></li>
+<li><p>If you can’t quite get it, go check the solution.</p></li>
+</ol>
+</section>
+<section class="section" id="rename-a-file">
+<h3>Rename a file</h3>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">.renameFile()</span></code> to change the name of a file. This method will happen before writing files happens. It takes in 3 arguments: 1) the old/current path, 2) new/future path, and 3) a callback.</p>
+<ol class="arabic simple">
+<li><p>Try renaming <code class="docutils literal notranslate"><span class="pre">text.txt</span></code> using <code class="docutils literal notranslate"><span class="pre">.renameFile()</span></code>.</p></li>
+</ol>
+</section>
+<section class="section" id="delete-a-file">
+<h3>Delete a file</h3>
+<p>To delete a file, use <code class="docutils literal notranslate"><span class="pre">.unlink()</span></code>. This method will run before renaming files. It only requires a filepath and a callback.</p>
+<ol class="arabic simple">
+<li><p>Try deleting your <code class="docutils literal notranslate"><span class="pre">.txt</span></code> file using <code class="docutils literal notranslate"><span class="pre">.unlink()</span></code>.</p></li>
+</ol>
+</section>
+<section class="section" id="using-path">
+<h3>Using Path</h3>
+<p>The Node.js <code class="docutils literal notranslate"><span class="pre">path</span></code> module allows more ways to access and interact with the file system. You can read more about it <a class="reference external" href="https://nodejs.dev/learn/the-nodejs-path-module" target="_blank">here</a>.</p>
+<p>File paths differ between operating systems, so using <code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">path.join()</span></code> specifically) ensures that file paths are correct no matter the system.</p>
+<p><code class="docutils literal notranslate"><span class="pre">path.join()</span></code> can take as many arguments as you have, it will join them all into one path. All the arguments should be strings and they <strong>should not</strong> contain any slashes.</p>
+<ol class="arabic simple">
+<li><p>Try changing some of your file paths to use <code class="docutils literal notranslate"><span class="pre">path.join()</span></code>. (Look in the solutions or read about <code class="docutils literal notranslate"><span class="pre">.join</span></code> in the link above if you have questions).</p></li>
+</ol>
+<p><strong>When you are done, make sure to upload all your code to GitHub.</strong></p>
+</section>
+</section>
+</section>
+
+        </main>
+
+        <footer id="page-footer">
+            <p>&copy; 2022 Devmountain</p>
+        </footer>
+      </div>
+
+      <script src="_static/main.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+  </body>
+</html>
