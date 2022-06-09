@@ -13,16 +13,18 @@ const InfoCard = ({ data, length, index }) => {
       
       <div className="About">
         <div className="Basic">
-        <h3>From:</h3> <p>{data.city}, {data.country}</p>
+        <h3>From: <span className="UserInfo">{data.city}, {data.country}</span></h3> 
         
-        <h3>Job Title:</h3> <p>{data.title}</p>
-        <h3>Employer:</h3> <p>{data.employer}</p>
+        <h3>Job Title: <span className="UserInfo">{data.title}</span></h3> 
+        <h3>Employer: <span className="UserInfo">{data.employer}</span></h3> 
         </div>
-        <h3>Favorite Movies:</h3>
-        <ol className="Movielist"> 
-          <li>{data.favoriteMovies[0]}</li>
-          <li>{data.favoriteMovies[1]}</li>
-          <li>{data.favoriteMovies[2]}</li>
+        <ol> 
+        <h3 className="MovieSec">Favorite Movies:
+        <li className="Movielist">{data.favoriteMovies[0]}</li>
+          <li className="Movielist">{data.favoriteMovies[1]}</li>
+          <li className="Movielist">{data.favoriteMovies[2]}</li>
+        </h3>
+          
         </ol>
       </div>
     </div>
