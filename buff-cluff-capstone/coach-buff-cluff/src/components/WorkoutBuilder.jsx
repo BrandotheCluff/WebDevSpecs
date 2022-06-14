@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Genorator = () => {
+const WorkoutBuilder = () => {
 
     return (
         <div>
@@ -27,4 +27,4 @@ const Genorator = () => {
 }
 
 
-export default Genorator
+export default WorkoutBuilder

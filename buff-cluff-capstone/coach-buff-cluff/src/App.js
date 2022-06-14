@@ -1,6 +1,6 @@
 import './App.css';
 import Coaching from './components/Coaching'
-import Genorator from './components/Genorator';
+import WorkoutBuilder from './components/WorkoutBuilder';
 
 function App() {
   return (
