@@ -1,16 +1,30 @@
-import React from 'react'
+import React, {useState} from 'react'
+import useAxios from '../hooks/useAxios'
 
 
 const WorkoutBuilder = () => {
+
+    
 
     return (
         <div>
             <div className='SelectField'>
             <select className='Selector' placeholder='Muscle Groups'>
-                <option>Push</option>
-                <option>Pull</option>
-                <option>Legs</option>
-                <option>Full Body</option>
+                <select className='BodyPart'>Back
+                <select>Barbell</select>
+                <select>Dumbbell</select>
+                <select>Kettlebell</select>
+                <select>Assisted</select>
+                <select></select>
+                <select></select>
+                <select></select>
+                <select></select>
+                </select>
+                <select className='BodyPart'>Chest</select>
+                <select className='BodyPart'>Arms</select>
+                <select className='BodyPart'>Legs</select>
+                <select className='BodyPart'>Abs</select>
+                <select className='BodyPart'>Cardio</select>
             </select>
             <select className='Selector' placeholder='Intensity'>
                 <option>Normal</option>
