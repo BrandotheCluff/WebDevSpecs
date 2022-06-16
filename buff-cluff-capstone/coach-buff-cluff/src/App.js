@@ -1,9 +1,9 @@
 import './App.css';
 import useAxios from './hooks/useAxios';
 import { useEffect, useState } from 'react';
-import axios from 'axios'
-import Coaching from './components/Coaching'
-import WorkoutBuilder from './components/WorkoutBuilder';
+// import axios from 'axios'
+// import Coaching from './components/Coaching'
+// import WorkoutBuilder from './components/WorkoutBuilder';
 import NavBar from './components/NavBar';
 
 function App() {
