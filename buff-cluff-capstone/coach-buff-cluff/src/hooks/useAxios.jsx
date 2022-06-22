@@ -4,6 +4,7 @@ import axios from "axios";
 const useAxios = (url) => {
     const [data, setData] = useState({})
 
+
     useEffect(() => {
        let options = {
             method: 'GET',
@@ -16,12 +17,14 @@ const useAxios = (url) => {
         
         axios.request(options).then((response) => {
             console.log(response.data);
+            return response.data
         }).catch(function (error) {
             console.error(error);
         });
 
     })
     return data
+
 }
 
 export default useAxios

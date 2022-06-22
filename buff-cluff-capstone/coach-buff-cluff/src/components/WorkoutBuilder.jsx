@@ -1,42 +1,36 @@
-import React from 'react'
-// import useAxios from '../hooks/useAxios'
+import React, {useEffect} from 'react'
+import useAxios from '../hooks/useAxios'
 // import {useState} from 'react'
 
 
 const WorkoutBuilder = () => {
-
     
+
 
     return (
         <div>
             <div className='SelectField'>
-            <select className='Selector' value='Muscle Groups'>
-                <option className='BodyPart'>
-                {/* <option>Barbell</option>
-                <option>Dumbbell</option>
-                <option>Kettlebell</option>
-                <option>Assisted</option>
-                <option>Trap Bar</option>
-                <option></option>
-                <option></option>
-                <option></option> */}
-                </option>
-                <select className='BodyPart'>Chest</select>
-                <select className='BodyPart'>Arms</select>
-                <select className='BodyPart'>Legs</select>
-                <select className='BodyPart'>Abs</select>
-                <select className='BodyPart'>Cardio</select>
+            <select className='Selector' defaultValue="Muscle Groups">
+                <option disabled='disabled'>Muscle Groups</option>
+                <option className='BodyPart'>Back</option>
+                <option className='BodyPart'>Chest</option>
+                <option className='BodyPart'>Arms</option>
+                <option className='BodyPart'>Legs</option>
+                <option className='BodyPart'>Abs</option>
+                <option className='BodyPart'>Cardio</option>
+                
             </select>
-            <select className='Selector'>Intensity
+            <select className='Selector' defaultValue="Intensity">
+                <option disabled='disabled'>Intensity</option>
                 <option>Normal</option>
                 <option>Intense</option>
                 <option>🔥Very Intense🔥</option>
             </select>
             </div>
-            <input className='Exercise' readOnly='true'></input>
-            <input className='Exercise' readOnly='true'></input>
-            <input className='Exercise' readOnly='true'></input>
-            <input className='Exercise' readOnly='true'></input>
+            <input className='Exercise' readOnly={true}></input>
+            <input className='Exercise' readOnly={true}></input>
+            <input className='Exercise' readOnly={true}></input>
+            <input className='Exercise' readOnly={true}></input>
         </div>
     )
 }

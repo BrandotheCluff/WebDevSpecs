@@ -3,12 +3,13 @@ import useAxios from './hooks/useAxios';
 import { useEffect, useState } from 'react';
 // import axios from 'axios'
 // import Coaching from './components/Coaching'
-// import WorkoutBuilder from './components/WorkoutBuilder';
+import WorkoutBuilder from './components/WorkoutBuilder';
 import NavBar from './components/NavBar';
 
 function App() {
-  const info = useAxios('bodyPartList')
-  // const back = useAxios('bodyPart/back')
+  const info = useAxios('bodyPartList') 
+  const back = useAxios('bodyPart/back')
+  console.warn(back)
   // const cardio = useAxios('bodyPart/cardio')
   // const chest = useAxios('bodyPart/chest')
   // const lowerArms = useAxios('bodyPart/lower-arms')
@@ -19,6 +20,8 @@ function App() {
   
 
 useEffect(() => { 
+ 
+
 })
 
 
@@ -26,6 +29,7 @@ useEffect(() => {
   return (
     <div className="App">
       <NavBar />
+      <div className='MainImage'></div>
     </div>
   );
 }

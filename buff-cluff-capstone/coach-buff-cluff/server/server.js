@@ -5,7 +5,7 @@ const app = express();
 
 const controlWorkout = require('./controllers/workout')
 
-let baseUrl = {
+let options = {
     method: 'GET',
     url: `https://exercisedb.p.rapidapi.com/exercises/bodyPartList`,
     headers: {
@@ -13,8 +13,13 @@ let baseUrl = {
         'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
       }
     }
+    axios.request(options).then((response) => {
+      console.log(response.data);
+  }).catch(function (error) {
+      console.error(error);
+  });
 
-app.get(`${baseUrl}/bodyPart/back`, controlWorkout.getBack)
+app.get(`${options}/bodyPart/back`, controlWorkout.getBack)
 
 
 const port = 5000;
