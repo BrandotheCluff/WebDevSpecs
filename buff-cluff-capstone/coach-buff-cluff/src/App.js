@@ -1,35 +1,48 @@
-import './App.css';
-import useAxios from './hooks/useAxios';
-import { useEffect, useState } from 'react';
+import "./App.css";
+import { useEffect, useState } from "react";
 // import axios from 'axios'
 // import Coaching from './components/Coaching'
-import WorkoutBuilder from './components/WorkoutBuilder';
-import NavBar from './components/NavBar';
+import WorkoutBuilder from "./components/WorkoutBuilder";
+import NavBar from "./components/NavBar";
+import Equipment from "./components/Equipment";
 
 function App() {
-  const info = useAxios('bodyPartList') 
-  const back = useAxios('bodyPart/back')
-  console.warn(back)
-  // const cardio = useAxios('bodyPart/cardio')
-  // const chest = useAxios('bodyPart/chest')
-  // const lowerArms = useAxios('bodyPart/lower-arms')
-  // const upperArms = useAxios('bodyPart/upper-arms')
-  // const lowerLegs = useAxios('bodyPart/lower-legs')
-  // const upperLegs = useAxios('bodyPart/upper-legs')
-  // const shoulders = useAxios('bodyPart/shoulders')
-  
+  // const [data, setData] = useState([]);
 
-useEffect(() => { 
- 
+  // useEffect(() => {
+  //     fetch('https://exercisedb.p.rapidapi.com/exercises/equipment/barbell', {
+  //       headers: {
+  //         'X-RapidAPI-Key': 'e8565680e9msh721a60b51d1533cp184228jsn2a4a6a37a7bc',
+  //         'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
+  //       },
+  //     })
+  //       .then((response) => response.json())
+  //       .then((json) => setData(json));
+  //   }, []);
 
-})
+  // //   console.log(data);
 
+  // let filterByEquipment = data.filter((exercise) => {
+  //       return exercise.bodyPart === "back"
+  //     })
 
+  const [build, setBuild] = useState(false);
+
+  const toggleBuild = () => {
+    setBuild((build) => !build);
+  };
 
   return (
     <div className="App">
-      <NavBar />
-      <div className='MainImage'></div>
+      <NavBar openForm={toggleBuild} />
+      <div className="MainImage">asdf</div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      {build && <WorkoutBuilder openForm={toggleBuild} />}
     </div>
   );
 }

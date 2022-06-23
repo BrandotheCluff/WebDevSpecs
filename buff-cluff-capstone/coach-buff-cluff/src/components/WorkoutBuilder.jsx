@@ -1,39 +1,82 @@
-import React, {useEffect} from 'react'
-import useAxios from '../hooks/useAxios'
-// import {useState} from 'react'
+import React, { useEffect, useState } from "react";
+import NavBar from "./NavBar";
+import Equipment from "./Equipment";
+
+const WorkoutBuilder = ({}) => {
+  const [data, setData] = useState([]);
+  const [muscle, setMuscle] = useState("");
+  const [equip, setEquip] = useState(false);
+
+  const toggleEquip = () => {
+     setEquip((equip) => !equip);
+  
+  };
+
+  const [equipment, setEquipment] = useState("")
 
 
-const WorkoutBuilder = () => {
+    useEffect(() => {
+        fetch(`https://exercisedb.p.rapidapi.com/exercises/equipment/${equipment}`, {
+          headers: {
+            "X-RapidAPI-Key": "e8565680e9msh721a60b51d1533cp184228jsn2a4a6a37a7bc",
+            "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
+          },
+        })
+          .then((response) => response.json())
+          .then((json) => setData(json));
+      }, []);
     
+      // console.log(data);
+
+    
+    
+      let filterByEquipment = data.filter((exercise) => {
+        return exercise.bodyPart === muscle;
+      });
+      // console.log(filterByEquipment);
+
+      const getWorkout = e => {
+        setEquipment(e.target.value)
+      }
 
 
-    return (
-        <div>
-            <div className='SelectField'>
-            <select className='Selector' defaultValue="Muscle Groups">
-                <option disabled='disabled'>Muscle Groups</option>
-                <option className='BodyPart'>Back</option>
-                <option className='BodyPart'>Chest</option>
-                <option className='BodyPart'>Arms</option>
-                <option className='BodyPart'>Legs</option>
-                <option className='BodyPart'>Abs</option>
-                <option className='BodyPart'>Cardio</option>
-                
-            </select>
-            <select className='Selector' defaultValue="Intensity">
-                <option disabled='disabled'>Intensity</option>
-                <option>Normal</option>
-                <option>Intense</option>
-                <option>🔥Very Intense🔥</option>
-            </select>
-            </div>
-            <input className='Exercise' readOnly={true}></input>
-            <input className='Exercise' readOnly={true}></input>
-            <input className='Exercise' readOnly={true}></input>
-            <input className='Exercise' readOnly={true}></input>
-        </div>
-    )
-}
+  return (
+    <div>
+      <div className="SelectField">
+        <select className="Selector" defaultValue="Muscle Groups" onChange={(e) => toggleEquip(e) && setMuscle(e.target.value)}>
+          <option disabled="disabled">Muscle Groups</option>
+          <option className="BodyPart" value="back">Back</option>
+          <option className="BodyPart" value="chest">Chest</option>
+          <option className="BodyPart" value={"lower arms" && "upper arms"}>Arms</option>
+          <option className="BodyPart" value={"lower legs" && "upper legs"}>Legs</option>
+          <option className="BodyPart" value="waist">Abs</option>
+          <option className="BodyPart" value="cardio">Cardio</option>
+        </select>
+        <select className="Selector" defaultValue="Intensity">
+          <option disabled="disabled">Intensity</option>
+          <option>Normal</option>
+          <option>Intense</option>
+          <option>🔥Very Intense🔥</option>
+        </select>
+      </div>
+      
+      <form>
+        <input className="Exercise" readOnly={true}></input>
+        <input className="Exercise" readOnly={true}></input>
+        <input className="Exercise" readOnly={true}></input>
+        <input className="Exercise" readOnly={true}></input>
+      </form>
+      {equip && <Equipment displayEquip={toggleEquip} showWorkout={getWorkout} />}
+      {filterByEquipment.map((workout) => {
+        return (
+          <div>
+            <li>{workout.name}</li>
+            <img src={workout.gifUrl} />
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
-
-export default WorkoutBuilder
+export default WorkoutBuilder;
