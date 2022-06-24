@@ -13,32 +13,31 @@ const Equipment = ({showWorkout}) => {
         <form className='Equipment Form'>
         <h3>Equipment</h3>
         
-        <select defaultValue={"Barbell"} onChange={showWorkout}>
+        <select defaultValue={"Barbell"} onChange={(e) => showWorkout(e)}>
         <option value="barbell">Barbell</option>
-        </select>
-
-        <select defaultValue={"Dumbbell"} onChange={showWorkout}>
+        
+         {/* defaultValue={"Dumbbell"} onChange={showWorkout} */}
         <option value="dumbbell">Dumbbell</option>
-        </select>
-        <select defaultValue={"Kettlebell"} onChange={showWorkout}>
+        
+         {/* defaultValue={"Kettlebell"} onChange={showWorkout} */}
         <option value="kettlebell">Kettlebell</option>
-        </select>
-        <select defaultValue={"Trap Bar"} onChange={showWorkout}> 
+        
+         {/* defaultValue={"Trap Bar"} onChange={showWorkout} */}
         <option value="trap bar">Trap Bar</option>
-        </select>
-        <select defaultValue={"Leverage Machine"} onChange={showWorkout}> 
+        
+         {/* defaultValue={"Leverage Machine"} onChange={showWorkout}  */}
         <option value="leverage machine">Leverage Machine</option>
-        </select>
-        <select defaultValue={"Smith Machine"} onChange={showWorkout}>
+        
+         {/* defaultValue={"Smith Machine"} onChange={showWorkout} */}
         <option value="smith machine">Smith Machine</option>
-        </select>
-        <select defaultValue={"Assisted"} onChange={showWorkout}>
+        
+         {/* defaultValue={"Assisted"} onChange={showWorkout} */}
         <option value="assisted">Assisted</option>
-        </select>
-        <select defaultValue={"Banded"} onChange={showWorkout}>
+        
+         {/* defaultValue={"Banded"} onChange={showWorkout} */}
         <option value="band">Banded</option>
-        </select>
-        <select defaultValue={"Bodyweight (No Equipment)"} onChange={showWorkout}>
+        
+         {/* defaultValue={"Bodyweight (No Equipment)"} onChange={showWorkout} */}
             <option value="body weight">Bodyweight (No Equipment)</option>
         </select>
         </form>

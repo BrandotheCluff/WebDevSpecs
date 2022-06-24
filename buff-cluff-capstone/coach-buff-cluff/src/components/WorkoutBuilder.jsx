@@ -24,26 +24,32 @@ const WorkoutBuilder = ({}) => {
         })
           .then((response) => response.json())
           .then((json) => setData(json));
-      }, []);
+      }, [equipment]);
     
       // console.log(data);
 
     
     
       let filterByEquipment = data.filter((exercise) => {
+      console.log(muscle);
         return exercise.bodyPart === muscle;
       });
-      // console.log(filterByEquipment);
 
       const getWorkout = e => {
         setEquipment(e.target.value)
+        console.log(e.target.value)
+      }
+
+      const muscleHandler = (e) => {
+        toggleEquip(e);
+        setMuscle(e.target.value)
       }
 
 
   return (
     <div>
       <div className="SelectField">
-        <select className="Selector" defaultValue="Muscle Groups" onChange={(e) => toggleEquip(e) && setMuscle(e.target.value)}>
+        <select className="Selector" defaultValue="Muscle Groups" onChange={(e) => muscleHandler(e)}>
           <option disabled="disabled">Muscle Groups</option>
           <option className="BodyPart" value="back">Back</option>
           <option className="BodyPart" value="chest">Chest</option>
