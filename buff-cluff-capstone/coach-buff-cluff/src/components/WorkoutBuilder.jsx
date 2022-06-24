@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "./NavBar";
 import Equipment from "./Equipment";
+import WorkoutCard from "./WorkoutCard";
 
 const WorkoutBuilder = ({}) => {
   const [data, setData] = useState([]);
@@ -11,6 +12,8 @@ const WorkoutBuilder = ({}) => {
      setEquip((equip) => !equip);
   
   };
+
+  
 
   const [equipment, setEquipment] = useState("")
 
@@ -29,21 +32,20 @@ const WorkoutBuilder = ({}) => {
       // console.log(data);
 
     
-    
       let filterByEquipment = data.filter((exercise) => {
-      console.log(muscle);
+      // console.log(muscle);
         return exercise.bodyPart === muscle;
       });
 
       const getWorkout = e => {
         setEquipment(e.target.value)
-        console.log(e.target.value)
-      }
+        // console.log(e.target.value)
+      };
 
       const muscleHandler = (e) => {
         toggleEquip(e);
-        setMuscle(e.target.value)
-      }
+        setMuscle(e.target.value);
+      };
 
 
   return (
@@ -75,10 +77,7 @@ const WorkoutBuilder = ({}) => {
       {equip && <Equipment displayEquip={toggleEquip} showWorkout={getWorkout} />}
       {filterByEquipment.map((workout) => {
         return (
-          <div>
-            <li>{workout.name}</li>
-            <img src={workout.gifUrl} />
-          </div>
+        <WorkoutCard workout={workout}/>
         );
       })}
     </div>
