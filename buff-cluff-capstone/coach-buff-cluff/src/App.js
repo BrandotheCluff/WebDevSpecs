@@ -1,7 +1,7 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-// import axios from 'axios'
-// import Coaching from './components/Coaching'
+import {DndProvider} from 'react-dnd';
+import { HTML5Backend } from "react-dnd-html5-backend";
 import WorkoutBuilder from "./components/WorkoutBuilder";
 import NavBar from "./components/NavBar";
 import Equipment from "./components/Equipment";
@@ -33,6 +33,7 @@ function App() {
   };
 
   return (
+    <DndProvider backend={HTML5Backend}>
     <div className="App">
       <NavBar openForm={toggleBuild} />
       <div className="MainImage">asdf</div>
@@ -44,6 +45,7 @@ function App() {
       <br></br>
       {build && <WorkoutBuilder openForm={toggleBuild} />}
     </div>
+    </DndProvider>
   );
 }
 

@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from 'react'
-import WorkoutBuilder from './WorkoutBuilder';
+import React from 'react'
 
 const Equipment = ({showWorkout}) => {
     // const [data, setData] = useState([]);
@@ -13,7 +12,9 @@ const Equipment = ({showWorkout}) => {
         <form className='Equipment Form'>
         <h3>Equipment</h3>
         
-        <select defaultValue={"Barbell"} onChange={(e) => showWorkout(e)}>
+        <select defaultValue={"Select Equipment"} onChange={(e) => showWorkout(e)}>
+        <option disabled="disabled">Select Equipment</option>
+
         <option value="barbell">Barbell</option>
         
          {/* defaultValue={"Dumbbell"} onChange={showWorkout} */}
