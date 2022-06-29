@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { useDrop } from "react-dnd";
 import Equipment from "./Equipment";
 import WorkoutCard from "./WorkoutCard";
@@ -15,18 +16,10 @@ const WorkoutBuilder = () => {
   const [equipment, setEquipment] = useState("");
 
   useEffect(() => {
-    fetch(
-      `https://exercisedb.p.rapidapi.com/exercises/equipment/${equipment}`,
-      {
-        headers: {
-          "X-RapidAPI-Key":
-            process.env.WORKOUT_API_KEY,
-          "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
-        },
-      }
-    )
-      .then((response) => response.json())
-      .then((json) => setData(json));
+    axios
+      .get(`http://localhost:5000/${equipment}`)
+      .then((response) => setData(response.data));
+    // .then((json) => setData(json));
   }, [equipment]);
 
   // console.log(data);
@@ -51,23 +44,25 @@ const WorkoutBuilder = () => {
 
   const [{ isOver }, drop] = useDrop(() => ({
     accept: "card",
-    drop: (item) => addWorkoutToBoard(item.id),
+    drop: (item) => {
+      console.log(data);
+      addWorkoutToBoard(item);
+    },
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
   }));
 
-  const addWorkoutToBoard = (id) => {
-    const workoutList = data.filter((lift) => id == lift.id); 
-    console.log(workoutList)
-    setBoard((board) => [...board, workoutList[0]]);
-    console.log(typeof id, data)
+  const addWorkoutToBoard = (item) => {
+    // console.log(id, arr)
+    // const workoutList = arr.filter((lift) => id == lift.id);
+    setBoard((board) => [...board, item]);
+    console.log(typeof id, data);
   };
-
-   const dropFunc = board.map((workout) => {
-      return <WorkoutCard lift={workout}/>;
-    });
-
+  // console.log(board)
+  const dropFunc1 = board.map((workout) => {
+    return <WorkoutCard workout={workout} />;
+  });
 
   return (
     <div>
@@ -105,18 +100,23 @@ const WorkoutBuilder = () => {
         </select>
       </div>
 
-      <div className="WorkoutField">
+      <form className="WorkoutField">
         <div
           ref={drop}
           style={{ border: "2px solid black", height: "100px", width: "260px" }}
           className="Exercise"
         >
-        {dropFunc}
+          {dropFunc1}
+        </div>
+        <div
+          ref={drop}
+          style={{ border: "2px solid black", height: "100px", width: "260px" }}
+          className="Exercise"
+        >
         </div>
         <div className="Exercise"></div>
         <div className="Exercise"></div>
-        <div className="Exercise"></div>
-      </div>
+      </form>
       <div className="Workouts">
         {equip && (
           <Equipment displayEquip={toggleEquip} showWorkout={getWorkout} />

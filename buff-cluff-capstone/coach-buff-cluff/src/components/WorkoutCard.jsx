@@ -5,7 +5,7 @@ import GifDisplay from './GifDisplay';
 const WorkoutCard = ({workout, lift, id,}) => {
   const [{isDragging}, drag] = useDrag(() => ({
     type: "card",
-    item: {id: id},
+    item: workout,
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     })
@@ -15,7 +15,7 @@ const WorkoutCard = ({workout, lift, id,}) => {
     const toggleGif = (e) => {
         setGif((gif) => !gif)
     }
-    // console.log(workout)
+    // console.log(workout.name)
   return (
     <div ref={drag} style={{border: isDragging ? "5px silid pink" : "0px"}} className="NameAndGif">
         <p>{workout.name}</p>

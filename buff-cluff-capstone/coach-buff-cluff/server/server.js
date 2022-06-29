@@ -1,25 +1,30 @@
 const express = require('express');
 const axios = require('axios');
+require("dotenv").config()
 const cors = require('cors');
 const app = express();
 
 const controlWorkout = require('./controllers/workout')
 
-let options = {
-    method: 'GET',
-    url: `https://exercisedb.p.rapidapi.com/exercises/bodyPartList`,
-    headers: {
-        'X-RapidAPI-Key': 'e8565680e9msh721a60b51d1533cp184228jsn2a4a6a37a7bc',
-        'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
-      }
-    }
-    axios.request(options).then((response) => {
-      console.log(response.data);
-  }).catch(function (error) {
-      console.error(error);
-  });
+const {WORKOUT_API_KEY} = process.env
+// console.log(typeof(WORKOUT_API_KEY) )
 
-app.get(`${options}/bodyPart/back`, controlWorkout.getBack)
+app.use(cors())
+
+app.get("/:equipment", (req, result) => {
+  axios.get(`https://exercisedb.p.rapidapi.com/exercises/equipment/${req.params.equipment}`,
+  {
+    headers: {
+      "X-RapidAPI-Key": WORKOUT_API_KEY,
+      "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
+    },
+  }).then((res) => {
+    // console.log(res)
+    return result.status(200).send(res.data)
+  })
+})
+
+// app.get(`${options}/bodyPart/back`, controlWorkout.getBack)
 
 
 const port = 5000;
