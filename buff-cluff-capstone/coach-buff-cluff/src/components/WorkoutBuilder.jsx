@@ -4,6 +4,8 @@ import { useDrop } from "react-dnd";
 import Equipment from "./Equipment";
 import WorkoutCard from "./WorkoutCard";
 
+
+
 const WorkoutBuilder = () => {
   const [data, setData] = useState([]);
   const [muscle, setMuscle] = useState("");
@@ -19,7 +21,6 @@ const WorkoutBuilder = () => {
     axios
       .get(`http://localhost:5000/${equipment}`)
       .then((response) => setData(response.data));
-    // .then((json) => setData(json));
   }, [equipment]);
 
   // console.log(data);
@@ -45,7 +46,7 @@ const WorkoutBuilder = () => {
   const [{ isOver }, drop] = useDrop(() => ({
     accept: "card",
     drop: (item) => {
-      console.log(data);
+      // console.log(data);
       addWorkoutToBoard(item);
     },
     collect: (monitor) => ({
@@ -54,10 +55,8 @@ const WorkoutBuilder = () => {
   }));
 
   const addWorkoutToBoard = (item) => {
-    // console.log(id, arr)
-    // const workoutList = arr.filter((lift) => id == lift.id);
     setBoard((board) => [...board, item]);
-    console.log(typeof id, data);
+    console.log(item);
   };
   // console.log(board)
   const dropFunc1 = board.map((workout) => {
@@ -109,8 +108,8 @@ const WorkoutBuilder = () => {
           {dropFunc1}
         </div>
         <div
-          ref={drop}
-          style={{ border: "2px solid black", height: "100px", width: "260px" }}
+          // ref={drop}
+          // style={{ border: "2px solid black", height: "100px", width: "260px" }}
           className="Exercise"
         >
         </div>

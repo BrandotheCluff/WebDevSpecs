@@ -28,11 +28,20 @@ row-gap: 500px;
   transform: rotate(270deg);
   } */
 
-.NavButtons {
-/* display: flex;
-align-content: flex-end; */
-}
+/* .NavButtons {
+display: flex;
+align-content: flex-end;
+} */
 
 .NameAndGif {
-  display: inline
+  width: 100%;
+  text-align: center;
+}
+
+.Card {
+  display: inline-block;
+}
+
+.gifButton{
+  display: inline-block;
 }
