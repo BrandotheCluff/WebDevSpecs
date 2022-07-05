@@ -22,13 +22,14 @@ const WorkoutBuilder = () => {
       .get(`http://localhost:5000/${equipment}`)
       .then((response) => setData(response.data));
   }, [equipment]);
-
   // console.log(data);
 
   let filterByEquipment = data.filter((exercise) => {
     // console.log(muscle);
     return exercise.bodyPart === muscle;
-  });
+  }).map((workout, index) => {
+    return <WorkoutCard workout={workout} id={workout.id} key={index} />;
+  })
 
   const getWorkout = (e) => {
     setEquipment(e.target.value);
@@ -40,13 +41,13 @@ const WorkoutBuilder = () => {
     setMuscle(e.target.value);
   };
 
-  //Drag and Drop logic
+  ///////////////Drag and Drop logic
   const [board, setBoard] = useState([]);
 
   const [{ isOver }, drop] = useDrop(() => ({
     accept: "card",
     drop: (item) => {
-      // console.log(data);
+      // console.log(item);
       addWorkoutToBoard(item);
     },
     collect: (monitor) => ({
@@ -59,12 +60,14 @@ const WorkoutBuilder = () => {
     console.log(item);
   };
   // console.log(board)
-  const dropFunc1 = board.map((workout) => {
-    return <WorkoutCard workout={workout} />;
+  const dropFunc1 = board.map((workout, index) => {
+    // console.log('board', workout)
+    return <WorkoutCard workout={workout} key={index}/>;
   });
 
   return (
-    <div>
+    <div className="WorkoutBuilder">
+      <header className="BuilderTitle">Workout Builder</header>
       <div className="SelectField">
         <select
           className="Selector"
@@ -98,32 +101,23 @@ const WorkoutBuilder = () => {
           <option>🔥Very Intense🔥</option>
         </select>
       </div>
-
-      <form className="WorkoutField">
-        <div
-          ref={drop}
-          style={{ border: "2px solid black", height: "100px", width: "260px" }}
-          className="Exercise"
-        >
+      <div className="Workout-Box">
+      <div className="Workouts">
+      {/* {equip && ( */}
+          <Equipment displayEquip={toggleEquip} showWorkout={getWorkout} />
+        {/* )} */}
+        {/* {filterByEquipment.map((workout, index) => {
+          return <WorkoutCard workout={workout} id={workout.id} key={workout} />;
+        })} */}
+        {filterByEquipment}
+      </div>
+      
+        <div ref={drop} 
+         className="Exercise">
           {dropFunc1}
         </div>
-        <div
-          // ref={drop}
-          // style={{ border: "2px solid black", height: "100px", width: "260px" }}
-          className="Exercise"
-        >
         </div>
-        <div className="Exercise"></div>
-        <div className="Exercise"></div>
-      </form>
-      <div className="Workouts">
-        {equip && (
-          <Equipment displayEquip={toggleEquip} showWorkout={getWorkout} />
-        )}
-        {filterByEquipment.map((workout) => {
-          return <WorkoutCard workout={workout} id={workout.id} />;
-        })}
-      </div>
+      
     </div>
   );
 };

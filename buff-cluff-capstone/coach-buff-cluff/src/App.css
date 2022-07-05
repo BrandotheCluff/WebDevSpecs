@@ -33,15 +33,100 @@ display: flex;
 align-content: flex-end;
 } */
 
+.WorkoutBuilder {
+  contain: content;
+  background-color: rgb(182, 143, 219);
+  width: 80%;
+  height: 50%;
+  overflow: scroll;
+  margin-left: 20%;
+  padding-left: 30px;
+  border-radius: 15px;
+}
+
+.BuilderTitle {
+  padding-bottom: 2px;
+  font-weight: bold
+}
+
 .NameAndGif {
+  display: flex;
+  justify-content: center;
   width: 100%;
   text-align: center;
 }
 
 .Card {
-  display: inline-block;
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  background-color: bisque;
 }
 
+
+
 .gifButton{
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  height: 60%;
+  margin-top: 5%;
+}
+
+.gifBox {
+width: 100px;
+height: 100px;
+}
+
+.gif {
+  width: 100%;
+  height: 100%;
+}
+
+.Calculator {
+  background-color:rgb(46, 94, 94);
+  width: 40%;
+  margin-left: 40%;
+  padding: .02rem;
+  border-radius: 10px;
+}
+
+.Workout-Box {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.Workouts {
+  /* background-color: rgb(64, 85, 98); */
+  width: 30%;
+  margin-left: 40%;
+}
+
+.Exercise {
+  position: absolute;
+  border: 2px solid black;
+  height: 300px;
+  width: 260px;
+  grid-template-columns: repeat(auto-fill, 300px);
+  padding: .5rem;
+  gap: .5rem;
+}
+
+/* .calc-box {
+  background-color: aqua;
+  width: 40%
+} */
+
+.max-title {
+  font-size: 180%;
+  padding-top: 0px;
+}
+
+.lift-name {
+  font-size: 100%;
+  margin-bottom: 10px;
 }

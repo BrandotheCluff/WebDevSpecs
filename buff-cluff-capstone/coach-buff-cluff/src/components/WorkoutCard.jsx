@@ -18,13 +18,12 @@ const WorkoutCard = ({workout, lift, id,}) => {
     }
     // console.log(workout.name)
   return (
-    <div ref={drag} style={{border: isDragging ? "5px silid pink" : "0px"}} className="NameAndGif">
+    <div ref={drag} onClick={() => console.log(workout)} style={{border: isDragging ? "5px silid pink" : "0px"}} className="NameAndGif">
       <div className='Card'>
         <p>{workout.name}</p>
         <button className="gifButton" onClick={toggleGif}>gif</button>
         </div>
         {gif && <GifDisplay displayGif={toggleGif} workout={workout}/>}
-        
     </div>
   )
 }
