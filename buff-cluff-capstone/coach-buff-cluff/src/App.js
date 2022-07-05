@@ -21,8 +21,9 @@ function App() {
   return (
     <DndProvider backend={HTML5Backend}>
     <div className="App">
+    <div className="MainImage">
+      </div>
       <NavBar openForm={toggleBuild} openMax={toggleMax} />
-      <div className="MainImage"></div>
       <br></br>
       <br></br>
       <br></br>
@@ -35,5 +36,4 @@ function App() {
     </DndProvider>
   );
 }
-
 export default App;
