@@ -1,56 +1,111 @@
+
+
 .App {
   position: absolute;
-width: 1040px;
-height: 750px;
+width: 100%;
+height: 100%;
 left: 0px;
 top: 0px;
-  text-align: center;
+text-align: center;
+  background: url(../images/AA\ 1\ Exercise.png)  no-repeat center; 
+  background-size: 80%;
+  background-blend-mode: overlay;
 }
+
+
 
 .NavBar {
 position: absolute;
-width: 1440px;
+width: 100%;
 height: 124px;
 left: 0px;
 top: 0px;
-background-color: rgba(79, 173, 117, 1);
+background-color: rgba(1, 22, 56, 0.594);
 display: flex;
 align-items: flex-end;
-row-gap: 500px;
+/* row-gap: 500px; */
+}
+.NavButtonBox {
+display: flex;
+justify-content: space-between;
+margin-bottom: 5px;
+margin-left: 10px;
 }
 
-.MainImage {
-  width: 125%;
-  height: 206.5%;
+.NavButton {
+  background-color: rgb(90, 115, 83);
+  border-style: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  transition: .3s;
+}
+.NavButton:hover {
+  background-color: rgb(151, 213, 101);
+  box-shadow: 1.2px 1.2px;
+}
+
+/* .MainImage {
   background: no-repeat center;
   background-size: cover;
-  background-image: url(../images/muscle-pic.png); 
-  z-index: -1;
-  transform: rotate(270deg);
-  filter: grayscale(100%);
-  }
-
-/* .NavButtons {
-display: flex;
-align-content: flex-end;
+  background-image: url(../images/AA\ 1\ Exercise.png); 
+  width: 60%;
+  height: 60%;
+  margin-top: 200px;
+  margin-left: 370px;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.435);
+  background-blend-mode: overlay;
 } */
+
+
 
 
 .WorkoutBuilder {
   contain: content;
-  background-color: rgb(182, 143, 219);
-  width: 80%;
-  height: 50%;
+  /* background-color: rgb(63, 108, 81); */
+  background-color: white;
+  width: 40%;
+  height: 40%;
   overflow: scroll;
-  margin-left: 20%;
+  margin-top: 8%;
+  margin-left: 12%;
   padding-left: 30px;
   border-radius: 15px;
-  margin-top: -145%;
+  border:  rgb(222, 223, 227);
+  border-style: outset;
+}
+.SelectField {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 10%;
 }
 
 .BuilderTitle {
+  display: flex;
+  align-items: flex-start;
   padding-bottom: 2px;
-  font-weight: bold
+  margin-left: 7.6%;
+  font-weight: bold;
+  margin-top: 12px;
+  font-size: 20px;
+  color: rgb(80, 133, 202);
+}
+
+.EquipField {
+  margin-top: 0px;
+  /* margin-left: -10%; */
+}
+
+.EquipTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: rgb(80, 133, 202);
+}
+
+.EquipSelect {
+  margin-bottom: 5px;
 }
 
 .NameAndGif {
@@ -58,6 +113,7 @@ align-content: flex-end;
   justify-content: center;
   width: 100%;
   text-align: center;
+  /* margin-left: -25%; */
 }
 
 .Card {
@@ -67,10 +123,20 @@ align-content: flex-end;
   border-radius: 10px;
   display: flex;
   justify-content: space-around;
-  width: 200px;
-  background-color: bisque;
+  width: 90%;
+  background-color: rgb(151, 213, 101);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.534);
+  margin-bottom: 5px;
+  background: linear-gradient(rgb(123, 213, 101,), rgb(151, 227, 101));
+  font-weight: bold;
+  transition: all .2s ease-in-out;
 }
 
+.Card:hover {
+background-color: rgb(185, 221, 175);
+transform: scale(1.1);
+;
+}
 
 
 .gifButton{
@@ -86,19 +152,11 @@ height: 10%;
 }
 
 .gif {
-  width: 200px;
-  height: 200px;
-  margin-left: 10px;
+  width: 700%;
+  height: 700%;
+  margin-left: 70%;
   border: 1px solid;
-  box-shadow: 2.5px 5px;
-}
-
-.Calculator {
-  background-color:rgb(46, 94, 94);
-  width: 40%;
-  margin-left: 40%;
-  padding: .02rem;
-  border-radius: 10px;
+  box-shadow: 2.5px 5px rgb(0, 0, 0, 0.534);
 }
 
 .Workout-Box {
@@ -111,30 +169,76 @@ height: 10%;
   /* background-color: rgb(64, 85, 98); */
   width: 30%;
   margin-left: 40%;
+  margin-top: -60px;
 }
 
 .Exercise {
   position: absolute;
   border: 2px solid black;
-  height: 300px;
-  width: 260px;
-  grid-template-columns: repeat(auto-fill, 300px);
-  padding: .5rem;
-  gap: .5rem;
+  border-radius: 20px;
+  height: 75%;
+  width: 30%;
+  padding: 2%;
+  /* gap: .5rem; */
+  margin-top: .5%;
+  /* margin-left: -3%; */
 }
 
-/* .calc-box {
-  background-color: aqua;
-  width: 40%
-} */
+.Calculator {
+  contain: content;
+  background-color: white;
+  width: 21%;
+  height: 37%;
+  margin-left: 20%;
+  margin-top: 8%;
+  /* padding: .02rem; */
+  border-radius: 10px;
+  /* padding-bottom: 1%; */
+  border:  rgb(222, 223, 227);
+  border-style: outset;
+}
 
 .max-title {
+  display: flex;
+  justify-content: center;
   font-size: 180%;
   padding-top: 0px;
+  color: rgb(80, 133, 202);
+  margin-top: 8%;
+  font-weight: bolder;
+  margin-bottom: 10%;
+}
+
+.Calc-contents {
+  contain: content;
+}
+
+.input {
+  min-width: 20px;
+  max-width: 70px;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+
+.reset {
+  background-color: rgb(80, 133, 202);
+  border-radius: 5px;
+  border-style: none;
+  padding: 3px;
+  color: white;
+  font-weight: bold;
+}
+
+.reset:hover {
+  background-color: rgb(150, 182, 224);
+  color: rgb(47, 47, 47);
 }
 
 .lift-name {
   font-size: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 4%;
+  color: rgb(80, 133, 202);
 }
+
+
 

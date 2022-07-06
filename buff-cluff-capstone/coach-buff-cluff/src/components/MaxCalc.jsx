@@ -17,38 +17,58 @@ const MaxCalc = () => {
     // }, 0)
    
     const calcMaxes = (e) => {
-        maxSquat = Math.round((+squat.value * (1 + (5 / 30) + (1 + (3 / 30)))) / 2)
-        maxBench = Math.round((+bench.value * (1 + (5 / 30) + (1 + (3 / 30)))) / 2)
-        maxDead = Math.round((+dead.value * (1 + (5 / 30) + (1 + (3 / 30)))) / 2)
+        switch(e.target.name) {
+            case 'squat':
+                setMaxSquat(Math.round((e.target.value * (1 + (5 / 30) + (1 + (3 / 30)))) / 2))
+                break
+            case 'bench':
+                setMaxBench(Math.round((e.target.value * (1 + (5 / 30) + (1 + (3 / 30)))) / 2))
+                break
+            case 'dead':
+                setMaxDead(Math.round((e.target.value * (1 + (5 / 30) + (1 + (3 / 30)))) / 2))
+                break
+        }
+        // maxSquat = Math.round((e.target.value * (1 + (5 / 30) + (1 + (3 / 30)))) / 2)
+        // maxBench = Math.round((e.bench.value * (1 + (5 / 30) + (1 + (3 / 30)))) / 2)
+        // maxDead = Math.round((e.dead.value * (1 + (5 / 30) + (1 + (3 / 30)))) / 2)
     }
+    // const handleCalc = () => {
+    //     calcMaxes()
+    // }
 
-
+    const clearVals = () => {
+        setSquat()
+        setBench()
+        setDead()
+        setMaxSquat(0)
+        setMaxBench(0)
+        setMaxDead(0)
+    }
 
   return (
     <div className="Calculator">
-        <h4 className='max-title'>Max Calculator</h4>
+        <header className='max-title'>Max Calculator</header>
 
 
-<div>
-    <h6 className='lift-name'>Squat</h6>
-    <input type="number" className="squat-input" onChange={calcMaxes} value={squat}/>
+<div className='Calc-contents'>
+    <header className='lift-name'>Squat</header>
+    <input type="number" className="input" onChange={calcMaxes} value={squat} name='squat'/>
     x 5 ➡️
-    <input className="squat-answer" readOnly={true} value={maxSquat}/>
-    <h6 className='lift-name'>Bench</h6>
-    <input type="number" className="bench-input" onChange={calcMaxes} value={bench}/>
+    <input className="input" readOnly={true} value={maxSquat}/>
+    <header className='lift-name'>Bench</header>
+    <input type="number" className="input" onChange={calcMaxes} value={bench} name='bench'/>
     x 5 ➡️
-    <input className="bench-answer" readOnly={true} value={maxBench}/>
-    <h6 className='lift-name'>Dead</h6>
-    <input type="number" className="dead-input" onChange={calcMaxes} value={dead}/>
+    <input className="input" readOnly={true} value={maxBench}/>
+    <header className='lift-name'>Dead</header>
+    <input type="number" className="input" onChange={calcMaxes} value={dead} name='dead'/>
     x 5 ➡️
-    <input className="dead-answer" readOnly={true} value={maxDead} />
+    <input className="input" readOnly={true} value={maxDead} />
     <br></br>
     <br></br>
     <div class="button-field">
         <div className="button-flex">
             <div className="buttons">
-                <button className="get-maxes" onClick={(e) => {calcMaxes(e)}}>MAX OUT!</button>
-                <button className="reset">Clear</button>
+                <button className="reset" onClick={clearVals}>Clear</button>
             </div>
         </div>
     </div>

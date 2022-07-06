@@ -31,7 +31,8 @@ function App() {
       <br></br>
       <br></br>
       <br></br>
-      {build && <WorkoutBuilder openForm={toggleBuild} />} {max && <MaxCalc openMax={toggleMax}/>}
+      {max && <MaxCalc openMax={toggleMax}/>}
+      {build && <WorkoutBuilder openForm={toggleBuild} />} 
     </div>
     </DndProvider>
   );

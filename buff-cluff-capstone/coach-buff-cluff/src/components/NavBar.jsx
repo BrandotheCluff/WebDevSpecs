@@ -6,12 +6,11 @@ const NavBar = ({openForm, openMax}) => {
     
     return (
         <div className="NavBar">
-            <div className='NavButtons'>
-        <button>Coaching</button>
-        <button>Tutorials</button>
-        <button onClick={openForm}>Build-a-Workout</button>
-        <button onClick={openMax}>Max Calculator</button>
-        
+            <div className='NavButtonBox'>
+        {/* <button>Coaching</button> */}
+        {/* <button>Tutorials</button> */}
+        <button className="NavButton" onClick={openForm}>Build-a-Workout</button>
+        <button className="NavButton" onClick={openMax}>Max Calculator</button>
             </div>
         </div>
     )

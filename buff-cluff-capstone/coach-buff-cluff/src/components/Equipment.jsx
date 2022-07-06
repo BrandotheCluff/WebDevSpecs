@@ -7,12 +7,10 @@ const Equipment = ({showWorkout}) => {
 
 
   return (
-    <div className='Equip Form Div'>
-
-        <form className='Equipment Form'>
-        <h3>Equipment</h3>
+    <div className='EquipField'>
+        <header className='EquipTitle'>Equipment</header>
         
-        <select defaultValue={"Select Equipment"} onChange={(e) => showWorkout(e)}>
+        <select className='EquipSelect' defaultValue={"Select Equipment"} onChange={(e) => showWorkout(e)}>
         <option disabled="disabled">Select Equipment</option>
 
         <option value="barbell">Barbell</option>
@@ -41,7 +39,6 @@ const Equipment = ({showWorkout}) => {
          {/* defaultValue={"Bodyweight (No Equipment)"} onChange={showWorkout} */}
             <option value="body weight">Bodyweight (No Equipment)</option>
         </select>
-        </form>
         {/* {filterByEquipment.map((workout) => {
         return (
           <div>

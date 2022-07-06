@@ -28,7 +28,7 @@ const WorkoutBuilder = () => {
     // console.log(muscle);
     return exercise.bodyPart === muscle;
   }).map((workout, index) => {
-    return <WorkoutCard workout={workout} id={workout.id} key={index} />;
+    return <WorkoutCard workout={workout} id={workout.id} key={workout.id} />;
   })
 
   const getWorkout = (e) => {
@@ -60,10 +60,7 @@ const WorkoutBuilder = () => {
     console.log(item);
   };
   // console.log(board)
-  const dropFunc1 = board.map((workout, index) => {
-    // console.log('board', workout)
-    return <WorkoutCard workout={workout} key={index}/>;
-  });
+  
 
   return (
     <div className="WorkoutBuilder">
@@ -94,12 +91,12 @@ const WorkoutBuilder = () => {
             Cardio
           </option>
         </select>
-        <select className="Selector" defaultValue="Intensity">
+        {/* <select className="Selector" defaultValue="Intensity">
           <option disabled="disabled">Intensity</option>
           <option>Normal</option>
           <option>Intense</option>
           <option>🔥Very Intense🔥</option>
-        </select>
+        </select> */}
       </div>
       <div className="Workout-Box">
       <div className="Workouts">
@@ -111,13 +108,14 @@ const WorkoutBuilder = () => {
         })} */}
         {filterByEquipment}
       </div>
-      
-        <div ref={drop} 
+      <div ref={drop} 
          className="Exercise">
-          {dropFunc1}
+          {board.map((workout, index) => {
+    // console.log('board', workout)
+    return <WorkoutCard workout={workout} key={index}/>;
+  })}
         </div>
-        </div>
-      
+        </div> 
     </div>
   );
 };
