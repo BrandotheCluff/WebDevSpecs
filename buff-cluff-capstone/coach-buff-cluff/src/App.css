@@ -141,9 +141,15 @@ transform: scale(1.1);
 
 .gifButton{
   display: flex;
-  justify-content: center;
-  height: 60%;
-  margin-top: 5%;
+  justify-content:baseline;
+  height: 30px;
+  margin-top: 22%;
+  transition: all .2s ease-in-out;
+  border-radius: 10px;
+}
+
+.gifButton:hover {
+  background-color: rgb(172, 170, 170);
 }
 
 .gifBox {
@@ -157,6 +163,7 @@ height: 10%;
   margin-left: 70%;
   border: 1px solid;
   box-shadow: 2.5px 5px rgb(0, 0, 0, 0.534);
+  border-radius: 10px;
 }
 
 .Workout-Box {
@@ -196,6 +203,7 @@ height: 10%;
   /* padding-bottom: 1%; */
   border:  rgb(222, 223, 227);
   border-style: outset;
+  overflow: scroll;
 }
 
 .max-title {
