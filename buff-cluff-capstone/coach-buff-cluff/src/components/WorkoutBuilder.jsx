@@ -10,12 +10,11 @@ const WorkoutBuilder = () => {
   const [data, setData] = useState([]);
   const [muscle, setMuscle] = useState("");
   const [equip, setEquip] = useState(false);
+  const [equipment, setEquipment] = useState("");
 
   const toggleEquip = () => {
     setEquip((equip) => !equip);
   };
-
-  const [equipment, setEquipment] = useState("");
 
   useEffect(() => {
     axios
